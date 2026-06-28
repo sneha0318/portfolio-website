@@ -1,6 +1,53 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700&display=swap');
  
+html{
+    scroll-behavior: smooth;
+}
+nav{
+    position: sticky;     /* Navbar chipak jayega. */
+    top: 0; /* Screen ke top par rahega. */
+    z-index: 1000; /* Dusre elements ke upar dikhega. */
+    background: white;
+}
+.hero-text{
+   animation: fadeUp 1s ease; /* Heading ko page load hone par smoothly neeche se lao. */
+}
+
+@keyframes fadeUp{
+    form{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to{
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
+.hero img{
+    animation: zoomIn 1.2s ease;
+}
+
+@keyframes zoomIn{
+
+    form{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.btn{
+    transition: 0.3s;
+}
+.btn:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10ox 20px rgba(37,99,235,0.3);
+}
 *{
     margin:0;
     padding:0;
