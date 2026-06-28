@@ -139,3 +139,43 @@ nav ul li a:hover{
 .project-card:hover{
     transform: scale(1.05);
 }
+.Contact{
+    padding: 80px 100px;
+    background: #f8fafc;
+    text-align: center;
+}
+.Contact h2{
+    font-size: 40px;
+    color: #2563eb;
+    margin-bottom: 40px;
+}
+.Contact-form{
+    max-width: 600px;
+    margin: auto;
+}
+.Contact-form input,
+.Contact-form textarea{
+    width: 100%;
+    
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+.Contact-form button{
+    display: block;
+    margin: 0 auto;
+    background:#2563eb;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.Contact-formbutton:hover{
+    background: #1d4ed8;
+}
