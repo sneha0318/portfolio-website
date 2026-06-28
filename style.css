@@ -122,7 +122,7 @@ nav ul li a:hover{
     color: #2563eb;
     margin-bottom: 40px;
 }
-.project-container{
+.Project-container{
     display: flex;
     justify-content: center;
     gap: 30px;
