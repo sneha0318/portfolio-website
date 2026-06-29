@@ -329,7 +329,7 @@ body.dark-mode h1{
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 .Contact-form button{
     width: 100%;

@@ -108,21 +108,21 @@ const count = document.querySelector("#count");
     preview.textContent=nameInput.value;
  })
 
-const eye = document.querySelector("#toggle-password");
+// const eye = document.querySelector("#toggle-password");
 
-eye.addEventListener("click", function () {
+// eye.addEventListener("click", function () {
 
-    if (password.type === "password") {
-        password.type = "text";
-        eye.classList.remove("fa-eye-slash");
-        eye.classList.add("fa-eye");
-    } else {
-        password.type = "password";
-        eye.classList.remove("fa-eye");
-        eye.classList.add("fa-eye-slash");
-    }
+//     if (password.type === "password") {
+//         password.type = "text";
+//         eye.classList.remove("fa-eye-slash");
+//         eye.classList.add("fa-eye");
+//     } else {
+//         password.type = "password";
+//         eye.classList.remove("fa-eye");
+//         eye.classList.add("fa-eye-slash");
+//     }
 
-});
+// });
 
 const resetBtn = document.querySelector("#reset-btn");
 
@@ -140,3 +140,18 @@ copyBtn.addEventListener("click", function () {
     alert("Copied!");
 
 });
+
+const projects=["portfolio website","Landing page","Calculator"];
+for(let i=0; i<projects.length;i++){
+    console.log(projects[i]);
+}
+
+const product={
+    name:"Ring",
+    price:1999,
+    color:"Gold"
+};
+
+console.log(product.name);
+console.log(product.price);
+console.log(product.color);
