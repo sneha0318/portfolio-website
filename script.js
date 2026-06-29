@@ -76,3 +76,19 @@ const darkBtn = document.querySelector("#dark-btn");
 darkBtn.addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
 });
+
+const form = document.querySelector("#Contact-form");
+form.addEventListener("submit", function(event){
+    event.preventDefault();
+
+    const name = document.querySelector("#name").value.trim();
+    const email = document.querySelector("#email").value.trim();
+    const message = document.querySelector("#message").value.trim();
+
+    if(name ==="" || email ==="" || message ===""){
+
+        alert("please fill all fields");
+    }else{
+        alert("Form submitted Successfully!");
+    }
+})
