@@ -141,10 +141,10 @@ copyBtn.addEventListener("click", function () {
 
 });
 
-const projects=["portfolio website","Landing page","Calculator"];
-for(let i=0; i<projects.length;i++){
-    console.log(projects[i]);
-}
+// const projects=["portfolio website","Landing page","Calculator"];
+// for(let i=0; i<projects.length;i++){
+//     console.log(projects[i]);
+// }
 
 const product={
     name:"Ring",
@@ -155,3 +155,22 @@ const product={
 console.log(product.name);
 console.log(product.price);
 console.log(product.color);
+
+const projectsList=[
+    {
+        title:"Portfolio Website",
+        technology:"HTML & CSS"
+    },
+    {
+        title:"Landing Page",
+        technology:"HTML & CSS"
+    },
+    {
+        title:"Calculator",
+        technology:"HTML,CSS,JAVASCRIPT"
+    }
+];
+
+for(let i=0; i< projectsList.length; i++){
+    console.log(projectsList[i].title);
+}
