@@ -92,3 +92,51 @@ form.addEventListener("submit", function(event){
         alert("Form submitted Successfully!");
     }
 })
+
+const message = document.querySelector("#message");
+const count = document.querySelector("#count");
+
+ message.addEventListener("input", function(){
+    count.textContent=message.value.length;
+ });
+
+ const nameInput = document.querySelector("#name");
+ const preview = document.querySelector("#preview");
+
+
+ nameInput.addEventListener("input" , function(){
+    preview.textContent=nameInput.value;
+ })
+
+const eye = document.querySelector("#toggle-password");
+
+eye.addEventListener("click", function () {
+
+    if (password.type === "password") {
+        password.type = "text";
+        eye.classList.remove("fa-eye-slash");
+        eye.classList.add("fa-eye");
+    } else {
+        password.type = "password";
+        eye.classList.remove("fa-eye");
+        eye.classList.add("fa-eye-slash");
+    }
+
+});
+
+const resetBtn = document.querySelector("#reset-btn");
+
+resetBtn.addEventListener("click", function(){
+    document.querySelector("#contact-form").reset();
+})
+
+const copyBtn = document.querySelector("#copy-btn");
+const copyText = document.querySelector("#copy-text");
+
+copyBtn.addEventListener("click", function () {
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+
+});

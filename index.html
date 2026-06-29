@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- ye Responsive website ke liye mandatory hai -->
     <title>sneha | portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
 </head>
 
 <body>
@@ -74,19 +75,34 @@
             </div>
         </div>
     </section>
+<section class="Contact" id="Contact">
+    <h2>Contact Me</h2>
+    <form class="Contact-form" id="Contact-form">
+        <input type="text" id="name" placeholder="Your Name">
+        <h3 id="preview">Your Name</h3>
 
-    <section class="Contact" id="Contact">
-        <h2>Contact Me</h2>
-        <form class="Contact-form" id="Contact-form">
-            <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
 
-            <input type="email" id="email" placeholder="Your Email">
-            
-            <textarea  id="message" rows="5" placeholder="Your Message"></textarea>
+        <textarea id="message" rows="5" placeholder="Your Message"></textarea>
 
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+        <div class="password-box">
+            <input type="password" id="password" placeholder="Enter Password">
+
+         </div>
+
+        <p>Characters: <span id="count">0</span></p>
+        <button type="submit">Send Message</button> 
+
+     <div class="button-group">
+        <input type="text" id="copy-text" value="Welcome to My Portfolio">
+    <button type="button" id="copy-btn">Copy</button>
+
+    <button type="reset" id="reset-btn">Reset</button>
+</div>
+
+
+    </form>
+</section>
 
     <footer  class="footer">
         <p>&copy; 2026 Sneha | All Rights Reserver</p>
