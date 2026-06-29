@@ -174,3 +174,15 @@ const projectsList=[
 for(let i=0; i< projectsList.length; i++){
     console.log(projectsList[i].title);
 }
+
+const projects = [
+    { title: "Portfolio Website" },
+    { title: "Landing Page" },
+    { title: "Calculator" }
+];
+
+const container = document.querySelector("#projects");
+
+for (const project of projects) {
+    container.innerHTML += `<h3>${project.title}</h3>`;
+}
