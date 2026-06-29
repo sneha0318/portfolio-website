@@ -276,3 +276,24 @@ nav ul li a:hover{
         width: 100%;
     }
 }
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+body{
+    transition: all 0.4s ease;
+}
+.btn{
+    transition: 0.3s ease;
+}
+.btn:hover{
+    transform: scale(1.05);
+    background-color: #2563eb;
+    color: white;
+}
+.btn:active{
+    transform: scale(0.95);
+}
+body.dark-mode h1{
+    text-shadow: 0 0 10px white;
+}
