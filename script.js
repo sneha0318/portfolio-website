@@ -127,7 +127,7 @@ const count = document.querySelector("#count");
 const resetBtn = document.querySelector("#reset-btn");
 
 resetBtn.addEventListener("click", function(){
-    document.querySelector("#contact-form").reset();
+   document.querySelector("#Contact-form").reset();
 })
 
 const copyBtn = document.querySelector("#copy-btn");
@@ -146,15 +146,15 @@ copyBtn.addEventListener("click", function () {
 //     console.log(projects[i]);
 // }
 
-const product={
-    name:"Ring",
-    price:1999,
-    color:"Gold"
-};
+// const product={
+//     name:"Ring",
+//     price:1999,
+//     color:"Gold"
+// };
 
-console.log(product.name);
-console.log(product.price);
-console.log(product.color);
+// console.log(product.name);
+// console.log(product.price);
+// console.log(product.color);
 
 const projectsList=[
     {
@@ -181,8 +181,93 @@ const projects = [
     { title: "Calculator" }
 ];
 
-const container = document.querySelector("#projects");
+// const container = document.querySelector("#projects");
 
-for (const project of projects) {
-    container.innerHTML += `<h3>${project.title}</h3>`;
-}
+// for (const project of projects) {
+//     container.innerHTML += `<h3>${project.title}</h3>`;
+// }
+
+const ages =[12,18,20,25,30];
+
+const adults = ages.filter(age => age >=18);
+console.log(adults);
+
+const doubles = ages.map(age => age*2);
+console.log(doubles);
+
+const firstAdult = ages.find(age =>age >=18);
+console.log(firstAdult);
+
+// console.log("JavaScript Connected");
+
+// const items=[
+//     { name:"Laptop", price: 50000},
+// { name:"Phone", price:20000 }
+// ];
+
+// // ui container
+// const container=document.querySelector("#container");
+
+// // map()use karke cards banana 
+// items.map((item) =>{
+//     // console output
+//     console.log(item.name, item.price);
+
+//     // UI output
+//     container.innerHTML += `
+//         <div class="card">
+//             <h3>${item.name}</h3>
+//             <p>₹${item.price}</p>
+//         </div>
+//     `;
+// });
+const items = [
+    {
+        name: "Laptop",
+        price: 50000,
+        image: "images (1).jpg"
+    },
+    {
+        name: "Phone",
+        price: 20000,
+        image: "images (2).jpg"
+    },
+    {
+        name: "Bluethooth Speaker",
+        price: 10000,
+        image: "images (3).jpg"
+    }
+];
+
+const container = document.querySelector("#container");
+
+items.forEach((item) => {
+    container.innerHTML += `
+        <div class="card">
+            <img src="${item.image}" alt="${item.name}">
+            <h3>${item.name}</h3>
+            <p>₹${item.price}</p>
+        </div>
+    `;
+});
+
+// ===== My Skills =====
+
+const skills = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Git",
+    "GitHub"
+];
+
+const skillsContainer = document.querySelector("#skills-container");
+
+skills.map((skill) => {
+    skillsContainer.innerHTML += `
+        <div class="skill-card">
+            <h3>${skill}</h3>
+        </div>
+    `;
+});
