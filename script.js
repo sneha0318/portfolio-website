@@ -101,12 +101,18 @@ const count = document.querySelector("#count");
  });
 
  const nameInput = document.querySelector("#name");
- const preview = document.querySelector("#preview");
+const preview = document.querySelector("#preview");
+
+nameInput.addEventListener("input", function () {
+    preview.textContent = nameInput.value;
+});
+// //  const nameInput = document.querySelector("#name");
+//  const preview = document.querySelector("#preview");
 
 
- nameInput.addEventListener("input" , function(){
-    preview.textContent=nameInput.value;
- })
+//  nameInput.addEventListener("input" , function(){
+//     preview.textContent=nameInput.value;
+//  })
 
 // const eye = document.querySelector("#toggle-password");
 
@@ -221,35 +227,39 @@ console.log(firstAdult);
 //         </div>
 //     `;
 // });
-const items = [
-    {
-        name: "Laptop",
-        price: 50000,
-        image: "images (1).jpg"
-    },
-    {
-        name: "Phone",
-        price: 20000,
-        image: "images (2).jpg"
-    },
-    {
-        name: "Bluethooth Speaker",
-        price: 10000,
-        image: "images (3).jpg"
-    }
-];
 
-const container = document.querySelector("#container");
+// products.json
+fetch("products.json")
+.then(response => response.json())
+.then(items => {
 
-items.forEach((item) => {
-    container.innerHTML += `
-        <div class="card">
-            <img src="${item.image}" alt="${item.name}">
-            <h3>${item.name}</h3>
-            <p>₹${item.price}</p>
-        </div>
-    `;
+    const container = document.querySelector("#container");
+
+    items.forEach(item => {
+
+        container.innerHTML += `
+            <div class="card">
+                <img src="${item.image}">
+                <h3>${item.name}</h3>
+                <p>₹${item.price}</p>
+            </div>
+        `;
+
+    });
+
 });
+
+// const container = document.querySelector("#container");
+
+// items.forEach((item) => {
+//     container.innerHTML += `
+//         <div class="card">
+//             <img src="${item.image}" alt="${item.name}">
+//             <h3>${item.name}</h3>
+//             <p>₹${item.price}</p>
+//         </div>
+//     `;
+// });
 
 // ===== My Skills =====
 
@@ -264,41 +274,78 @@ const skills = [
 
 const skillsContainer = document.querySelector("#skills-container");
 
-skills.map((skill) => {
+skills.forEach(skill => {
     skillsContainer.innerHTML += `
         <div class="skill-card">
             <h3>${skill}</h3>
         </div>
     `;
 });
+// const saveBtn = document.querySelector("#save-btn");
+
+// const input = document.querySelector("#storage-name");
+
+// const output = document.querySelector("#saved-name");
+
+// saveBtn.addEventListener("click" , function(){
+//     localStorage.setItem("username",input.value);
+
+//     output.textContent="Saved Name:" + input.value;
+// });
+// const saved = localStorage.getItem("username");
+
+// if(saved){
+
+//     output.textContent =
+//     "Saved Name : " + saved;
+
+// }
+// const removeBtn =
+// document.querySelector("#remove-btn");
+
+// removeBtn.addEventListener("click", function(){
+
+//     localStorage.removeItem("username");
+
+//     output.textContent = "";
+
+//     input.value = "";
+
+// });
+
 const saveBtn = document.querySelector("#save-btn");
-
-const input = document.querySelector("#storage-name");
-
+const removeBtn = document.querySelector("#remove-btn");
 const output = document.querySelector("#saved-name");
 
-saveBtn.addEventListener("click" , function(){
-    localStorage.setItem("username",input.value);
+// Page load par
+const savedName = localStorage.getItem("username");
 
-    output.textContent="Saved Name:" + input.value;
-});
-const saved = localStorage.getItem("username");
-
-if(saved){
-
-    output.textContent =
-    "Saved Name : " + saved;
-
+if (savedName) {
+    output.textContent = "Welcome, " + savedName + " 👋";
+    nameInput.value = savedName;
 }
-const removeBtn =
-document.querySelector("#remove-btn");
 
-removeBtn.addEventListener("click", function(){
+// Save
+saveBtn.addEventListener("click", function () {
+
+    if (nameInput.value.trim() === "") {
+        alert("Please enter your name");
+        return;
+    }
+
+    localStorage.setItem("username", nameInput.value);
+
+    output.textContent = "Welcome, " + nameInput.value + " 👋";
+});
+
+// Remove
+removeBtn.addEventListener("click", function () {
 
     localStorage.removeItem("username");
 
+    nameInput.value = "";
+
+    preview.textContent = "Your Name";
+
     output.textContent = "";
-
-    input.value = "";
-
 });

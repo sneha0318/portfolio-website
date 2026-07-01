@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- ye Responsive website ke liye mandatory hai -->
     <title>sneha | portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="your-logo.png" type="image/png">
+    <!-- <link rel="icon" href="your-logo.png" type="image/png"> -->
     <meta name="description" content="Portfolio of Sneha, a BCA student and aspiring Full Stack Developer.">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
 </head>
@@ -41,7 +41,7 @@
                 </button>
                 </section>
                 
-                <section class="storage">
+                <!-- <section class="storage">
                     <h2>Save Your Name</h2>
                 
                     <input type="text" id="storage-name" placeholder="Enter Your Name">
@@ -51,7 +51,7 @@
                     <button id="remove-btn">
                         Remove Name
                     </button>
-                </section>
+                </section> -->
                 <section class="about">
                     <div class="about-content">
                         <h2>About Me:</h2>
@@ -91,32 +91,39 @@
             </div>
         </div>
     </section>
-   <section class="Products">
-    <h2>Products:</h2>
-    <div id="container" class="card-container"></div>
-</section>
-
-<<section class="skills">
-    <h2>My Skills</h2>
-    <div id="skills-container" class="skills-container"></div>
-</section>
+    <section class="Products">
+        <h2>Products:</h2>
+        <div id="container" class="card-container"></div>
+    </section>
+    
+    <section class="skills">
+        <h2>My Skills</h2>
+        <div id="skills-container" class="skills-container"></div>
+    </section>
     <section class="Contact" id="Contact">
         <h2>Contact Me:</h2>
         <form class="Contact-form" id="Contact-form">
             <input type="text" id="name" placeholder="Your Name">
             <h3 id="preview">Your Name</h3>
     
+           <h3 id="saved-name"></h3>
+
+<div class="name-buttons">
+    <button type="button" id="save-btn">Save Name</button>
+    <button type="button" id="remove-btn">Remove Name</button>
+</div>
+
             <input type="email" id="email" placeholder="Your Email">
-    
+
             <textarea id="message" rows="5" placeholder="Your Message"></textarea>
             <p>Characters: <span id="count">0</span></p>
-        <div class="password-box">
-            <input type="password" id="password" placeholder="Enter Password">
+            <div class="password-box">
+                <input type="password" id="password" placeholder="Enter Password">
 
-        </div>
+            </div>
 
 
-        <button type="submit">Send Message</button>
+            <button type="submit">Send Message</button>
 
         <div class="button-group">
             <input type="text" id="copy-text" value="Welcome to My Portfolio">

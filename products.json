@@ -1,0 +1,27 @@
+[
+    {
+        "name":"Laptop",
+        "price": 50000,
+        "image" :  "images (1).jpg"
+    },
+     {
+        "name": "Phone",
+        "price": 20000,
+        "image": "images (2).jpg"
+    },
+      {
+        "name": "Bluetooth Speaker",
+        "price": 10000,
+        "image": "images (3).jpg"
+    },
+    {
+        "name": "Smart Watch",
+        "price": "8999",
+        "image": "images (4).jpg"
+    },
+    {
+        "name":"Camera",
+        "price":"15,199",
+        "image": "images (5).jpg"
+    }
+]
