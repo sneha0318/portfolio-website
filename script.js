@@ -271,3 +271,34 @@ skills.map((skill) => {
         </div>
     `;
 });
+const saveBtn = document.querySelector("#save-btn");
+
+const input = document.querySelector("#storage-name");
+
+const output = document.querySelector("#saved-name");
+
+saveBtn.addEventListener("click" , function(){
+    localStorage.setItem("username",input.value);
+
+    output.textContent="Saved Name:" + input.value;
+});
+const saved = localStorage.getItem("username");
+
+if(saved){
+
+    output.textContent =
+    "Saved Name : " + saved;
+
+}
+const removeBtn =
+document.querySelector("#remove-btn");
+
+removeBtn.addEventListener("click", function(){
+
+    localStorage.removeItem("username");
+
+    output.textContent = "";
+
+    input.value = "";
+
+});
