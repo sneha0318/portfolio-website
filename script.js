@@ -349,3 +349,42 @@ removeBtn.addEventListener("click", function () {
 
     output.textContent = "";
 });
+const loadBtn = document.querySelector("#load-users");
+const usersContainer = document.querySelector("#users-container");
+
+loadBtn.addEventListener("click", loadUsers);
+
+async function loadUsers() {
+
+    usersContainer.innerHTML = "<h3>Loading...</h3>";
+
+    try {
+
+        const response = await fetch("https://jsonplaceholder.typicode.com/users");
+
+        const users = await response.json();
+
+        usersContainer.innerHTML = "";
+
+        users.forEach(user => {
+
+            usersContainer.innerHTML += `
+                <div class="user-card">
+                    <h3>${user.name}</h3>
+                    <p>${user.email}</p>
+                    <p>${user.phone}</p>
+                </div>
+            `;
+
+        });
+
+    }
+
+    catch(error){
+
+        usersContainer.innerHTML =
+        "<h3>Something went wrong!</h3>";
+
+    }
+
+}

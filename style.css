@@ -599,3 +599,50 @@ body.dark-mode p{
     font-size: 24px;
     font-weight: 600;
 } */
+ .users{
+    padding:80px 100px;
+    text-align:center;
+    background:#fff;
+}
+
+.users h2{
+    font-size:40px;
+    color:#2563eb;
+    margin-bottom:30px;
+}
+
+#load-users{
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:30px;
+}
+
+#load-users:hover{
+    background:#1d4ed8;
+}
+
+#users-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.user-card{
+    width:250px;
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.user-card:hover{
+    transform:translateY(-5px);
+    border:2px solid #2563eb;
+}
